@@ -1,10 +1,12 @@
+// Packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
 const generateSVG = require('./lib/generateSVG');
 
-// Array of shapes
+// Array of shapes for list used in the questions array
 const shapes = ['Circle', 'Square', 'Triangle'];
-// Array of questions
+
+// Array of questions for user input
 const questions = [
     { type: 'input', message: 'What would you like to display? Enter up to three characters:', name: 'text', validate: (value) => {if(value) {return true} else { return 'Please enter three characters to display.'}}},
     { type: 'input', message: 'What text color do you want? Enter a hexidecimal number or color name:', name: 'textColor', validate: (value) => {if(value) {return true} else { return 'Please enter a text color.'}}},
@@ -14,8 +16,8 @@ const questions = [
 
 // Function to write .svg file
 function writeToFile(data) {
-    const filename = 'logo.svg';
-    fs.writeFile(filename, generateSVG(data), (err) => err ? console.log(err) : console.log('Generated logo.svg'))
+    const filename = `${data.shape}.svg`;
+    fs.writeFile(`./examples/${filename}`, generateSVG(data), (err) => err ? console.log(err) : console.log('Generated logo.svg'))
 }
 
 // Function to initialize app
