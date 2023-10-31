@@ -63,7 +63,7 @@ And you can also preview your logo.svg in an internet browser as seen below:
 
 
 To view a demonstration of the application click the following link:  
-https://drive.google.com/file/d/1EzRCIcU1cDuo1S8oaA_-M3wWNWy5uqVR/view
+https://drive.google.com/file/d/1VWqmGSMdrVg-bcXb6261Ocr_ELPNFb75/view
 
 
 ## Credits
